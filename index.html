@@ -106,15 +106,16 @@ a{
 const btn = document.querySelector("#btn");
 const text = document.querySelector("#text");
 
-const num = prompt(`No. of messages you want to send :`);
 var msg = ``;
 
 btn.addEventListener("click",()=>{
   const message = text.value;
-  console.log(`message ${message}`); 
+  // console.log(`message ${message}`); 
+  const num = prompt(`No. of messages you want to send :`);
+
   for(var i=1;i<=num;i++){msg+=`${message} `;}
        btn.setAttribute("href",`https://api.whatsapp.com/send?l=en&text=${msg}`);
-     });
+});
 
 
 </script>
