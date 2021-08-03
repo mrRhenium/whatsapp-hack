@@ -113,7 +113,7 @@ btn.addEventListener("click",()=>{
   // console.log(`message ${message}`); 
   const num = prompt(`No. of messages you want to send :`);
 
-  for(var i=1;i<=num;i++){msg+=`${message} `;}
+  for(var i=1;i<=num;i++){msg+=`${message} \n`;}
        btn.setAttribute("href",`https://api.whatsapp.com/send?l=en&text=${msg}`);
 });
 
