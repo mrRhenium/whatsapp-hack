@@ -1,134 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WhatsApp-Trick</title>
-<link rel="stylesheet" href="responsive.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-<style>
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-#container{
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  border: 2px solid red;
-  background-color: black;
-}
-#msg_cont{
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  width: 50%;
-  height: 80%;
-  border: 5px solid red;
-}
-#img{
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 60%;
-  overflow: hidden;
-  border: 2px solid red;
-}
-#img i{
-  /* transform: translateY(-17%); */
-  /* width: 150%; */
-  /* height: 180%; */
-  color: greenyellow;
-  font-size: 15rem;
-}
-#input{
-  position: relative;
-  display: flex;
-  width: 100%;
-  height: 20%;
-  border: 2px solid white;
-}
-input[type="text"]{
-  width: 100%;
-  font-size: 2rem;
-  color: white;
-  padding: 1rem;
-  background-color: rgba(0,0,0,.5);
-}
-input[type="text"]::placeholder{
-  text-align: center;
-}
-#btn_div{
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 20%;
-  border: 2px solid white;
-}
-a{
-  position: relative;
-  display: block;
-  width: 10rem;
-  height: 3rem;
-  text-align: center;
-  font-size: 2rem;
-  color: white;
-  text-decoration: none;
-  border: 2px solid red;
-}
-@media screen and (max-width:600px){
-  #msg_cont{
-    width: 95%;
-  }
-}
-</style>
-</head>
-<div id="container">
-  <div id="msg_cont">
-    <div id="img">
-      <i class="fa fa-whatsapp" aria-hidden="true"></i>
-      <!-- <img src="friend-img.jpg" alt=""> -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WhatsApp-Trick</title>
+    <link rel="stylesheet" href="responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      #container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        border: 2px solid red;
+        background-color: black;
+      }
+      #msg_cont {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+        height: 80%;
+        border: 5px solid red;
+      }
+      #img {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 60%;
+        overflow: hidden;
+        border: 2px solid red;
+      }
+      #img i {
+        /* transform: translateY(-17%); */
+        /* width: 150%; */
+        /* height: 180%; */
+        color: greenyellow;
+        font-size: 15rem;
+      }
+      #input {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 20%;
+        border: 2px solid white;
+      }
+      input[type="text"] {
+        width: 100%;
+        font-size: 2rem;
+        color: white;
+        padding: 1rem;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      input[type="text"]::placeholder {
+        text-align: center;
+      }
+      #btn_div {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 20%;
+        border: 2px solid white;
+      }
+      a {
+        position: relative;
+        display: block;
+        width: 10rem;
+        height: 3rem;
+        text-align: center;
+        font-size: 2rem;
+        color: white;
+        text-decoration: none;
+        border: 2px solid red;
+      }
+      @media screen and (max-width: 600px) {
+        #msg_cont {
+          width: 95%;
+        }
+      }
+    </style>
+  </head>
+  <div id="container">
+    <div id="msg_cont">
+      <div id="img">
+        <i class="fa fa-whatsapp" aria-hidden="true"></i>
+        <!-- <img src="friend-img.jpg" alt=""> -->
+      </div>
+      <div id="input">
+        <input
+          id="text"
+          type="text"
+          placeholder="enter your message"
+          autocomplete="off"
+        />
+      </div>
+      <div id="btn_div">
+        <a id="btn" href="" target="blank">Send</a>
+        <!-- <a id="btn">Send</a> -->
+      </div>
     </div>
-        <div id="input">
-          <input id="text" type="text" placeholder="enter your message" autocomplete="off">
-        </div>
-        <div id="btn_div">
-           <a id="btn" href="" target="blank">Send</a>
-           <!-- <a id="btn">Send</a> -->
-        </div>
   </div>
-</div>
-<body>
-<script>
-const btn = document.querySelector("#btn");
-const text = document.querySelector("#text");
+  <body>
+    <script>
+      const btn = document.querySelector("#btn");
+      const text = document.querySelector("#text");
 
-var msg = [];
+      var msg = [];
 
-btn.addEventListener("click",()=>{
-  const message = text.value;
-  const num = prompt(`No. of messages you want to send :`);
-   
-  for(var i=1;i<=num;i++){
-           msg[i]=`${message}`;
-  }
-  var a = msg.join("%0a");
-  // document.write(a);
-  // console.log(`message ${a}`); 
-       
-       btn.setAttribute("href",`https://api.whatsapp.com/send?l=en&text=${a}`);
-});
-
-
-</script>
-</body>
+      btn.addEventListener("click", () => {
+        const message = text.value;
+        const num = prompt(`No. of messages you want to send :`);
+        var count = 1;
+        for (var i = 1; i <= num; i++) {
+          msg[i] = `${count++}. ${message}`;
+        }
+        var a = msg.join("%0a");
+        btn.setAttribute(
+          "href",
+          `https://api.whatsapp.com/send?l=en&text=${a}`
+        );
+      });
+    </script>
+  </body>
 </html>
